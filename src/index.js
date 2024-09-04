@@ -1,6 +1,6 @@
-import hh from "hyperscript-helpers";
-import { h, diff, patch } from "virtual-dom";
-import createElement from "virtual-dom/create-element";
+const hh = require("hyperscript-helpers");
+const { h, diff, patch } = require("virtual-dom");
+const createElement = require("virtual-dom/create-element");
 
 const { div, button, input } = hh(h);
 
@@ -60,3 +60,5 @@ const initModel = 0;
 
 const rootNode = document.getElementById("app");
 app(initModel, update, view, rootNode);
+
+module.exports = {view, update, app}
